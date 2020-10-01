@@ -3,5 +3,13 @@
 
 ## 如何使用
 ```javascript
+const serverless = require('serverless-http');
+const getAliyunCb = require('aliyun-serverless-http');
 
+const Koa = require('koa');
+
+const app = new Koa();
+// ... setup
+
+exports.handler = getAliyunCb(serverless(app));
 ``` 
